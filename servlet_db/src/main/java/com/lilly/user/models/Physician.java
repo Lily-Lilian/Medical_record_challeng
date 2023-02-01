@@ -15,7 +15,7 @@ public class Physician extends User {
       throw new Exception("User already exists");
     }
     if (!Pattern.matches("^[a-zA-z0-9*!@_\\-#$%^&]{8}$", getPassword())) {
-      throw new Exception("Password must be 4 characters!");
+      throw new Exception("Password must be 8 characters!");
     }
     encryptPassword();
     Users.addUser(this);
